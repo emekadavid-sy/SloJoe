@@ -1,0 +1,97 @@
+.{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: linear-gradient(135deg, #ff4e50, #f9d432);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header h1{
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease forwards;
+}
+header p{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2s ease forwards;
+}
+.btn{
+    background: #222;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    animation: fadeInUp 2.5s ease forwards;
+}
+.btn:hover{
+    background: #ff4e50;
+}
+section{
+    margin-top: 3rem;
+    animation: fadeIn 3s ease forwards;
+}
+.features ul, .roadmap ol{
+    max-width: 400px;
+    margin: 1rem auto;
+    text-align: left;
+    font-size: 1.1rem;
+    list-style-position: inside;
+    padding-left: 0;
+}
+footer{
+    margin-top: auto;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+    color: #fff8;
+}
+@keyframes fadeInDown{
+    0%{
+        opacity: 0;
+        transform:translateY(-20px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@media(max-width:600px){
+    header h1{
+        font-size: 2rem;
+    }
+    .btn{
+        padding: 0.6rem 1rem;
+    }
+    .features ul, .roadmap ol{
+        max-width: 100%;
+        padding-left: 1rem;
+    }
+}
